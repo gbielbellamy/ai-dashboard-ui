@@ -17,6 +17,9 @@ function Sidebar({ page, setPage }: Props) {
         <button onClick={() => setPage("settings")}>
           Settings
         </button>
+        <button onClick={() => setPage("components")}>
+          Components
+        </button>
       </nav>
     </aside>
   );

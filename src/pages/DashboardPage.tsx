@@ -1,3 +1,5 @@
+import ComponentsPage from "./ComponentsPage";
+
 type Props = {
   page: string;
 };
@@ -9,6 +11,10 @@ function DashboardPage({ page }: Props) {
 
   if (page === "settings") {
     return <main><h1>Settings</h1></main>;
+  }
+
+  if (page === "components") {
+    return <ComponentsPage />;
   }
 
   return (

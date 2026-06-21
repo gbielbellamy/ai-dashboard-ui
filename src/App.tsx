@@ -13,4 +13,3 @@ function App() {
 }
 
 export default App;
-console.log("APP RENDER");
