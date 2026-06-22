@@ -1,6 +1,7 @@
 import ComponentsPage from "./ComponentsPage";
 import { dashboardStats } from "../data/mockData";
 import Card from "../components/ui/Card";
+import ProductivityChart from "../components/charts/ProductivityChart";
 
 type Props = {
   page: string;
@@ -31,6 +32,7 @@ function DashboardPage({ page }: Props) {
         </Card>
       ))}
     </div>
+    <ProductivityChart />
   </main>
   );
 }

@@ -30,3 +30,13 @@ export const dashboardStats: Stat[] = [
     color: "#f59e0b",
   },
 ];
+
+export const productivityData = [
+  { day: "Mon", score: 75 },
+  { day: "Tue", score: 82 },
+  { day: "Wed", score: 68 },
+  { day: "Thu", score: 91 },
+  { day: "Fri", score: 85 },
+  { day: "Sat", score: 70 },
+  { day: "Sun", score: 78 },
+];

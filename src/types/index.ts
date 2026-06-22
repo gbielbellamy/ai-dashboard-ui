@@ -5,3 +5,8 @@ export type Stat = {
   description: string;
   color: string;
 };
+
+export type ProductivityData = {
+  day: string;
+  score: number;
+};
