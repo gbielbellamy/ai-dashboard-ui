@@ -1,26 +1,32 @@
-export const dashboardStats = [
+import type { Stat } from "../types";
+
+export const dashboardStats: Stat[] = [
   {
     id: 1,
     title: "Productivity Score",
     value: "85%",
     description: "Above average",
+    color: "#aa3bff",
   },
   {
     id: 2,
     title: "Active Tasks",
     value: "24",
     description: "4 due today",
+    color: "#3b82f6",
   },
   {
     id: 3,
     title: "Weekly Progress",
     value: "72%",
     description: "On track",
+    color: "#22c55e",
   },
   {
     id: 4,
     title: "AI Insights",
     value: "3",
     description: "New recommendations",
+    color: "#f59e0b",
   },
 ];
