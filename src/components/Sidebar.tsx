@@ -8,16 +8,16 @@ function Sidebar({ page, setPage }: Props) {
     <aside className="sidebar">
       <h2>AI Dashboard</h2>
       <nav>
-        <button onClick={() => setPage("home")}>
+        <button className={page === "home" ? "active" : ""} onClick={() => setPage("home")}>
           Dashboard
         </button>
-        <button onClick={() => setPage("analytics")}>
+        <button className={page === "analytics" ? "active" : ""} onClick={() => setPage("analytics")}>
           Analytics
         </button>
-        <button onClick={() => setPage("settings")}>
+        <button className={page === "settings" ? "active" : ""} onClick={() => setPage("settings")}>
           Settings
         </button>
-        <button onClick={() => setPage("components")}>
+        <button className={page === "components" ? "active" : ""} onClick={() => setPage("components")}>
           Components
         </button>
       </nav>

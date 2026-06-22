@@ -25,8 +25,8 @@ function DashboardPage({ page }: Props) {
       <div className="dashboard-grid">
       {dashboardStats.map((stat) => (
       <Card key={stat.id} title={stat.title}>
-        <p>{stat.value}</p>
-        <p>{stat.description}</p>
+        <p className="stat-value">{stat.value}</p>
+        <p className="stat-description">{stat.description}</p>
       </Card>
       ))}
     </div>
