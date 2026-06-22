@@ -177,3 +177,62 @@ code {
   background: var(--accent-bg);
   color: var(--accent);
 }
+
+.sidebar {
+  width: 240px;
+  min-height: 100vh;
+  background: var(--bg);
+  border-right: 1px solid var(--border);
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.sidebar h2 {
+  color: var(--text-h);
+  margin-bottom: 32px;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar button {
+  background: transparent;
+  color: var(--text);
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 14px;
+  width: 100%;
+}
+
+.sidebar button:hover {
+  background: var(--accent-bg);
+  color: var(--accent);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 24px;
+}
+
+
+
+
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}

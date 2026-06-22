@@ -5,7 +5,7 @@ type Props = {
 
 function Sidebar({ page, setPage }: Props) {
   return (
-    <aside>
+    <aside className="sidebar">
       <h2>AI Dashboard</h2>
       <nav>
         <button onClick={() => setPage("home")}>
