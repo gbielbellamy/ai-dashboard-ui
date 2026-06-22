@@ -13,7 +13,7 @@ function DashboardLayout({ children, page, setPage }: Props) {
       
       <Sidebar page={page} setPage={setPage} />
 
-      <main style={{ flex: 1, padding: "20px" }}>
+      <main style={{ flex: 1}}>
         {children}
       </main>
 
