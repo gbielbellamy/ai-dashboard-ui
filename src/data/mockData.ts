@@ -40,3 +40,13 @@ export const productivityData = [
   { day: "Sat", score: 70 },
   { day: "Sun", score: 78 },
 ];
+
+export const weeklyActivityData = [
+  { day: "Mon", tasks: 8, completed: 6 },
+  { day: "Tue", tasks: 12, completed: 10 },
+  { day: "Wed", tasks: 7, completed: 5 },
+  { day: "Thu", tasks: 15, completed: 13 },
+  { day: "Fri", tasks: 10, completed: 8 },
+  { day: "Sat", tasks: 5, completed: 4 },
+  { day: "Sun", tasks: 3, completed: 2 },
+];
