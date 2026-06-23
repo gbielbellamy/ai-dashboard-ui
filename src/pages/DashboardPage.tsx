@@ -3,6 +3,7 @@ import { dashboardStats } from "../data/mockData";
 import Card from "../components/ui/Card";
 import ProductivityChart from "../components/charts/ProductivityChart";
 import WeeklyActivityChart from "../components/charts/WeeklyActivityChart";
+import TaskDistributionChart from "../components/charts/TaskDistributionChart";
 
 type Props = {
   page: string;
@@ -35,6 +36,7 @@ function DashboardPage({ page }: Props) {
     </div>
     <ProductivityChart />
     <WeeklyActivityChart />
+    <TaskDistributionChart />
   </main>
   );
 }

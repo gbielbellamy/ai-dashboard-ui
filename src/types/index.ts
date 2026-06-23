@@ -16,3 +16,7 @@ export type WeeklyActivityData = {
   tasks: number;
   completed: number;
 };
+export type TaskDistributionData = {
+  name: string;
+  value: number;
+};

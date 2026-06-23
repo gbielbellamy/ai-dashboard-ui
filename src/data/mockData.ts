@@ -50,3 +50,10 @@ export const weeklyActivityData = [
   { day: "Sat", tasks: 5, completed: 4 },
   { day: "Sun", tasks: 3, completed: 2 },
 ];
+
+export const taskDistributionData = [
+  { name: "Completed", value: 45 },
+  { name: "In Progress", value: 30 },
+  { name: "Pending", value: 15 },
+  { name: "Cancelled", value: 10 },
+];
