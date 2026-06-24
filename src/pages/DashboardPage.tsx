@@ -4,6 +4,7 @@ import Card from "../components/ui/Card";
 import ProductivityChart from "../components/charts/ProductivityChart";
 import WeeklyActivityChart from "../components/charts/WeeklyActivityChart";
 import TaskDistributionChart from "../components/charts/TaskDistributionChart";
+import TaskWidget from "../components/dashboard/TaskWidget";
 
 type Props = {
   page: string;
@@ -37,6 +38,8 @@ function DashboardPage({ page }: Props) {
     <ProductivityChart />
     <WeeklyActivityChart />
     <TaskDistributionChart />
+    <TaskWidget />
+
   </main>
   );
 }
