@@ -470,23 +470,11 @@ code {
   align-items: center;
 }
 
-.dashboard-row {
+.dashboard-row--equal {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 24px;
   margin-top: 24px;
-}
-
-.dashboard-row--equal {
-  grid-template-columns: 1fr 1fr;
-}
-
-.dashboard-row__main {
-  min-width: 0;
-}
-
-.dashboard-row__side {
-  min-width: 0;
 }
 
 .dashboard-row__half {
@@ -494,10 +482,6 @@ code {
 }
 
 @media (max-width: 1024px) {
-  .dashboard-row {
-    grid-template-columns: 1fr;
-  }
-
   .dashboard-row--equal {
     grid-template-columns: 1fr;
   }
