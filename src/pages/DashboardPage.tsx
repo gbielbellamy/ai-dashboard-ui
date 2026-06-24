@@ -24,10 +24,12 @@ function DashboardPage({ page }: Props) {
     return <ComponentsPage />;
   }
 
-  return (
+return (
   <main className="dashboard-main">
     <h1 className="dashboard-title">Dashboard</h1>
     <p className="dashboard-subtitle">Welcome to your AI productivity dashboard</p>
+
+    {/* Stats Row */}
     <div className="dashboard-grid">
       {dashboardStats.map((stat) => (
         <Card key={stat.id} title={stat.title}>
@@ -36,14 +38,31 @@ function DashboardPage({ page }: Props) {
         </Card>
       ))}
     </div>
-    <ProductivityChart />
-    <WeeklyActivityChart />
-    <TaskDistributionChart />
-    <TaskWidget />
-    <NoteWidget />
 
+    {/* Main Row */}
+    <div className="dashboard-row">
+      <div className="dashboard-row__main">
+        <ProductivityChart />
+      </div>
+      <div className="dashboard-row__side">
+        <TaskWidget />
+      </div>
+    </div>
+
+    {/* Charts Row */}
+    <div className="dashboard-row dashboard-row--equal">
+      <div className="dashboard-row__half">
+        <WeeklyActivityChart />
+      </div>
+      <div className="dashboard-row__half">
+        <TaskDistributionChart />
+      </div>
+    </div>
+
+    {/* Notes Row */}
+    <NoteWidget />
   </main>
-  );
+);
 }
 
 export default DashboardPage;
