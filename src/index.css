@@ -494,3 +494,37 @@ code {
     grid-template-columns: 1fr;
   }
 }
+
+/* Transitions */
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: rgba(0, 0, 0, 0.15) 0 20px 25px -5px, rgba(0, 0, 0, 0.08) 0 8px 10px -4px;
+}
+
+.note-item {
+  transition: border-color 0.2s ease;
+}
+
+.note-item:hover {
+  border-color: var(--accent-border);
+}
+
+.task-item {
+  transition: border-color 0.2s ease;
+}
+
+.task-item:hover {
+  border-color: var(--accent-border);
+}
+
+.button {
+  transition: opacity 0.2s ease;
+}
+
+.button:hover {
+  opacity: 0.85;
+}
