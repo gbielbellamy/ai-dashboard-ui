@@ -6,6 +6,7 @@ import NoteWidget from "../components/dashboard/NoteWidget";
 import { motion } from "framer-motion";
 import AnimatedSection from "../components/ui/AnimatedSection";
 import AnalyticsPage from "./AnalyticsPage";
+import SettingsPage from "./SettingsPage";
 
 type Props = {
   page: string;
@@ -17,7 +18,7 @@ function DashboardPage({ page }: Props) {
   }
 
   if (page === "settings") {
-    return <main><h1>Settings</h1></main>;
+    return <SettingsPage />;
   }
 
   if (page === "components") {

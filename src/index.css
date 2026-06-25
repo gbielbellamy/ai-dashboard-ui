@@ -673,3 +673,133 @@ code {
     grid-template-columns: 1fr;
   }
 }
+
+/* Settings */
+.settings-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.settings-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.settings-card--danger {
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.settings-card__title {
+  color: var(--text-h);
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.settings-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.settings-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.settings-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.settings-toggle:last-child {
+  border-bottom: none;
+}
+
+.settings-toggle__label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-h);
+  margin-bottom: 2px;
+}
+
+.settings-toggle__desc {
+  font-size: 12px;
+  color: var(--text);
+}
+
+.toggle {
+  width: 44px;
+  height: 24px;
+  border-radius: 999px;
+  background: var(--border);
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+}
+
+.toggle::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: white;
+  top: 3px;
+  left: 3px;
+  transition: left 0.2s ease;
+}
+
+.toggle--active {
+  background: var(--accent);
+}
+
+.toggle--active::after {
+  left: 23px;
+}
+
+.settings-danger-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.settings-danger-item:last-child {
+  border-bottom: none;
+}
+
+.button-danger {
+  background: rgba(239, 68, 68, 0.15);
+  color: rgb(239, 68, 68);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.button-danger:hover {
+  background: rgba(239, 68, 68, 0.25);
+}
