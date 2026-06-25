@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { useState } from "react";
 import Sidebar from "../components/Sidebar";
 
 type Props = {
@@ -8,15 +9,39 @@ type Props = {
 };
 
 function DashboardLayout({ children, page, setPage }: Props) {
-  return (
-    <div style={{ display: "flex", minHeight: "100vh" }}>
-      
-      <Sidebar page={page} setPage={setPage} />
+  const [menuOpen, setMenuOpen] = useState(false);
 
-      <main style={{ flex: 1}}>
+  return (
+    <div className="layout">
+      <button
+        className="hamburger"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div className={`sidebar-wrapper ${menuOpen ? "open" : ""}`}>
+        <Sidebar
+          page={page}
+          setPage={(p) => {
+            setPage(p);
+            setMenuOpen(false);
+          }}
+        />
+      </div>
+
+      {menuOpen && (
+        <div
+          className="overlay"
+          onClick={() => setMenuOpen(false)}
+        />
+      )}
+
+      <main className="layout__main">
         {children}
       </main>
-
     </div>
   );
 }

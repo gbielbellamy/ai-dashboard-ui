@@ -115,6 +115,9 @@ code {
   border-radius: 12px;
   padding: 24px;
   box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .card-title {
@@ -224,6 +227,7 @@ code {
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
   margin-top: 24px;
+  align-items: stretch;
 }
 
 @media (max-width: 1024px) {
@@ -316,7 +320,6 @@ code {
   margin-bottom: 16px;
 }
 
-/* Task Widget */
 .task-widget {
   background: var(--bg);
   border: 1px solid var(--border);
@@ -527,4 +530,87 @@ code {
 
 .button:hover {
   opacity: 0.85;
+}
+
+/* Layout */
+.layout {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+
+.layout__main {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Hamburger Button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 100;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text-h);
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+/* Sidebar Wrapper */
+.sidebar-wrapper {
+  position: relative;
+}
+
+/* Overlay */
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 98;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .sidebar-wrapper {
+    position: fixed;
+    top: 0;
+    left: -240px;
+    height: 100vh;
+    z-index: 99;
+    transition: left 0.3s ease;
+  }
+
+  .sidebar-wrapper.open {
+    left: 0;
+  }
+
+  .overlay {
+    display: block;
+  }
+
+  .layout__main {
+    padding-top: 56px;
+  }
+
+    .sidebar {
+    padding-top: 56px;
+  }
+  
 }
