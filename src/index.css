@@ -392,7 +392,15 @@ code {
   color: rgb(239, 68, 68);
 }
 
-/* Note Widget */
+
+.empty-state {
+  text-align: center;
+  padding: 32px;
+  color: var(--text);
+  font-size: 14px;
+  opacity: 0.6;
+}
+
 .note-widget {
   background: var(--bg);
   border: 1px solid var(--border);

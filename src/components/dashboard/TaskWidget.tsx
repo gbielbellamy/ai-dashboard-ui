@@ -29,24 +29,30 @@ function TaskWidget() {
       </div>
 
       <ul className="task-list">
-        {tasks.map((task) => (
-          <li key={task.id} className="task-item">
-            <input
-              type="checkbox"
-              checked={task.completed}
-              onChange={() => toggleTask(task.id)}
-            />
-            <span className={task.completed ? "task-text completed" : "task-text"}>
-              {task.text}
-            </span>
-            <button
-              className="task-delete"
-              onClick={() => deleteTask(task.id)}
-            >
-              ✕
-            </button>
-          </li>
-        ))}
+        {tasks.length === 0 ? (
+          <div className="empty-state">
+            <p>No tasks yet. Add one above!</p>
+          </div>
+        ) : (
+          tasks.map((task) => (
+            <li key={task.id} className="task-item">
+              <input
+                type="checkbox"
+                checked={task.completed}
+                onChange={() => toggleTask(task.id)}
+              />
+              <span className={task.completed ? "task-text completed" : "task-text"}>
+                {task.text}
+              </span>
+              <button
+                className="task-delete"
+                onClick={() => deleteTask(task.id)}
+              >
+               ✕
+              </button>
+            </li>
+         ))
+      )}
       </ul>
     </div>
   );
