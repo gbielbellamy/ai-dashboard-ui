@@ -64,29 +64,35 @@ function NoteWidget() {
       </div>
 
       <div className="note-list">
-        {notes.map((note) => (
-          <div key={note.id} className="note-item">
-            <div className="note-item__content">
-              <h4 className="note-item__title">{note.title}</h4>
-              <p className="note-item__text">{note.content}</p>
-            </div>
-            <div className="note-item__actions">
-              <button
-                className="button button-secondary"
-                onClick={() => handleEdit(note.id, note.title, note.content)}
-              >
-                Edit
-              </button>
-              <button
-                className="task-delete"
-                onClick={() => deleteNote(note.id)}
-              >
-                ✕
-              </button>
-            </div>
-          </div>
-        ))}
+  {notes.length === 0 ? (
+    <div className="empty-state">
+      <p>No notes yet. Add one above!</p>
+    </div>
+  ) : (
+    notes.map((note) => (
+      <div key={note.id} className="note-item">
+        <div className="note-item__content">
+          <h4 className="note-item__title">{note.title}</h4>
+          <p className="note-item__text">{note.content}</p>
+        </div>
+        <div className="note-item__actions">
+          <button
+            className="button button-secondary"
+            onClick={() => handleEdit(note.id, note.title, note.content)}
+          >
+            Edit
+          </button>
+          <button
+            className="task-delete"
+            onClick={() => deleteNote(note.id)}
+          >
+            ✕
+          </button>
+        </div>
       </div>
+    ))
+  )}
+</div>
     </div>
   );
 }
